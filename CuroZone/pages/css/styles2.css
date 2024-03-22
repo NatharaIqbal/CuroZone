@@ -1,0 +1,743 @@
+@charset "utf-8";
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+html::-webkit-scrollbar {
+	width: .5vw;
+}
+
+html::-webkit-scrollbar-thumb {
+	background-color: rgba(77, 134, 181, 0.653);
+	border-radius: 40vw;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(77, 134, 181);
+}
+
+html::-webkit-scrollbar-track {
+	background-color: #ffffff;
+}
+
+body {
+	display: block;
+	background: url(/images/pxfuel.jpg) no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	min-height: 100vh;
+	height: 100%;
+	align-items: center;
+}
+
+.side-bar {
+	background: rgba(77, 134, 181, 0.67);
+	color: #FFFFFF;
+	width: 250px;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	overflow-y: auto;
+	transition: 0.6s ease;
+	transition-property: left;
+	z-index: 4;
+}
+
+header img {
+	width: 180px;
+	margin-left: 30px;
+	margin-top: 5px;
+	border-radius: 50%;
+	border: none;
+	z-index: 5;
+	position: relative;
+}
+
+
+.menu {
+	width: 100%;
+	margin-top: 0px;
+}
+
+.menu .item {
+	position: relative;
+	cursor: pointer;
+}
+
+.menu .item a {
+	color: #fff;
+	font-size: 16px;
+	text-decoration: none;
+	display: block;
+	padding: 10px 0px 5px 50px;
+	line-height: 30px;
+}
+
+.menu .item a:hover {
+	color: #9a6400;
+}
+
+.item i {
+	margin-right: 15px;
+}
+
+.item a .dropdown {
+	position: absolute;
+	right: 20px;
+	margin: 5px;
+	transition: 0.3s ease;
+}
+
+.item .sub-menu {
+	display: block;
+	background: #a5a0a061;
+	display: none;
+}
+
+.side-bar::-webkit-scrollbar {
+	width: 0px;
+}
+
+.item .sub-menu a {
+	padding-left: 80px;
+}
+
+.rotate {
+	transform: rotate(90deg);
+}
+
+.menu .item #active-item {
+	color: #022843;
+}
+
+.topbar {
+	background: rgba(114, 160, 197);
+	color: #FFFFFF;
+	display: flex;
+	position: fixed;
+	margin-top: 0px;
+	margin-left: 0px;
+	width: 100%;
+	height: 60px;
+	display: flex;
+	z-index: 3;
+}
+
+.topbar .blank{
+	background: rgb(255 255 255 / 52%);
+	width: 250px;
+}
+
+.topbar .rolenameimg img{
+	height: 55px;
+	margin-top: 0px;
+	margin-left: 5px;
+}
+
+.topbar .profile{
+	margin-left: auto;
+	padding-right: 10px;
+	
+}
+
+.topbar .profile .profileIcon{
+	width: 130px;
+	display: inline-flex;
+}
+
+.topbar .profile .profileIcon img{
+	margin-top: 7px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 45px;
+	border-radius: 50%;
+	border: 2px solid rgb(255, 255, 255);
+	cursor: pointer;
+	background: white;
+}
+
+.topbar .profile .profiledropdown{
+	background: rgba(255, 255, 255, .8);
+	border: 0px solid rgba(0, 0, 0, .1);
+	backdrop-filter: blur(5px);
+	box-shadow: 0 0 10 rgba(0, 0, 0, .2);
+	color: #000000;
+	display: none;
+	position: relative;
+	width: 130px;
+	margin-left: auto;
+	border-radius: 10px;
+}
+
+.topbar .profile .profiledropdown a{
+	text-align: center;
+	color: rgb(0, 0, 0);
+	padding: 15px 0px;
+	text-decoration: none;
+	display: block;
+}
+
+.topbar .profile .profiledropdown i{
+	padding-right: 20px;
+}
+
+.topbar .profile .profiledropdown a:hover{
+	background-color: #ddd;
+	border-radius: 10px;
+	color: #d09e42;
+	font-weight: 700;
+}
+
+.topbar .profile .profiledropdown #active-item{
+	color: #27b820;
+}
+
+.topbar .profile .profiledropdown #logoutbtn:hover{
+	background-color: #ddd;
+	border-radius: 10px;
+	color: #ff0000;
+	font-weight: 700;
+}
+
+.topbar .profile:hover .profiledropdown{
+	display: block;
+	z-index: 4;
+	position: relative;
+	font-weight: 500px;;
+}
+
+.mainframe {
+	padding: 20px;
+	display: inline-block;
+	margin-left: 280px;
+	margin-top: 90px;
+	margin-right: 30px;
+	margin-bottom: 5px;
+	border-radius: 20px;
+	width: 79.8%;
+	height: auto;
+	background: #83a8b129;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	border: 1px solid rgba(0, 0, 0, 0.208);
+	backdrop-filter: blur(10px);
+	box-shadow: 0 0 10 rgba(0, 0, 0, .2);
+	color: #000000;
+	align-content: center;
+	align-items: center;
+}
+
+.curo {
+	text-align: center;
+	margin-left: .5vw;
+	margin-right: .5vw;
+	margin-top: 20px;
+	width: 100%;
+	cursor: default;
+}
+
+.curo img {
+	width: 100%;
+	border-radius: 20px;
+}
+
+.task table {
+	border: 0;
+	margin: 20px auto 0px;
+}
+
+td {
+	padding: 10px 5px;
+	text-align: center;
+}
+
+td input{
+	border-radius: 40px;
+	padding: 5px;
+	width: 250px;
+	border: 2px solid white;
+	background: rgb(255, 255, 255, .8);
+	color: #000000;
+}
+
+td select {
+	border-radius: 40px;
+	padding: 5px;
+	width: 250px;
+	border: 2px solid white;
+	background: rgb(255, 255, 255, .8);
+	color: #000000;
+	cursor: pointer;
+}
+
+.submit-btn {
+	padding: 30px 0px 0px 0px;
+}
+
+#submit {
+	width: 100px;
+	height: 50px;
+	border-radius: 40px;
+	font-weight: bold;
+	border: none;
+	background: #fff;
+}
+
+#submit:hover {
+	background-color: #5d9c64;
+	color: #fff;
+	cursor: pointer;
+}
+
+#submit:onclick {
+	background-color: #5d9c64;
+	color: #fff;
+	cursor: pointer;
+}
+
+
+table a {
+	color: #FFFFFF;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+table a:hover {
+	color: #FBC157;
+}
+
+label {
+	font-weight: bold;
+}
+
+textarea {
+	border-radius: 20px;
+	padding: 15px;
+	width: 250px;
+	height: 200px;
+	border: 2px solid white;
+	background: rgb(255, 255, 255, .8);
+	color: #000000;
+}
+
+.searchtbl{
+	margin-top: 30px;
+	border: 0px;
+	align-content: center;
+	width: 100%;
+}
+
+.filltbl{
+	margin-top: 30px;
+	border: 0px;
+	margin: 30px auto 0px;
+}
+
+.searchname {
+	width: 50%;
+}
+
+th {
+	border-bottom: 3px;
+	padding: 10px 0px;
+	background-color: rgb(50 50 50 / 23%);
+	border-radius: 10px;
+}
+
+
+.assign_btn {
+	background-color: #007efd76;
+	border-color: #ffffff;
+	border-radius: 40px;
+	padding: 10px 18px;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+}
+
+.assign_btn:hover {
+	background-color: #007efd;
+	border-color: #ffffff;
+	border-radius: 40px;
+	padding: 10px 18px;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.edit_btn {
+	background-color: #fde80076;
+	border-color: #ffffff;
+	border-radius: 40px;
+	padding: 10px 18px;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+}
+
+.edit_btn:hover {
+	background-color: #fde800;
+	border-color: #ffffff;
+	border-radius: 40px;
+	color: black;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.confirm_del_btn {
+	background-color: #fb5757b9;
+	border-color: #ffffff;
+	border-radius: 40px;
+	padding: 10px;
+	color: white;
+	font-weight: bold;
+}
+
+.confirm_del_btn:hover{
+	background-color: #db0000;
+	border-color: #ffffff;
+	border-radius: 40px;
+	color: white;
+	cursor: pointer;
+	align-items: center;
+	align-content: center;
+	font-weight: bold;
+}
+
+
+.back_btn a {
+	color: rgba(0, 0, 0, 0.537);
+	font-size: 18px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.back_btn a:hover{
+	text-decoration: none;
+	color: rgb(0, 0, 0);
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.under_development_msg {
+	color: rgba(77, 134, 181);
+	display: flex;
+	text-align: center;
+	height: 575px;
+	align-items: center;
+	justify-content: center;
+	line-height: 1.5;
+}
+
+.under_development_msg h1,
+.under_development_msg h1 {
+	text-align: center;
+	margin-top: 545px;
+}
+
+/*.under_development{
+	background: url(/images/underConstruction.png);
+	background-size: cover;
+	background-position: center;
+}*/
+
+.view_chats {
+	margin-top: 40px;
+	width: 80%;
+}
+
+.chat_name {
+	padding: 10px;
+	background-color: rgba(50, 50, 50, 0.50);
+	border-radius: 10px;
+}
+
+.new_chat {
+	font-size: large;
+	background-color: rgba(33, 162, 255, 0.577);
+	border-radius: 40px;
+	text-align: center;
+}
+
+.new_chat:hover {
+	font-size: large;
+	background-color: rgb(33, 162, 255);
+	border-radius: 40px;
+	cursor: pointer;
+	text-align: center;
+}
+
+td .multipleselect{
+	border-radius: 10px;
+}
+
+.task{
+	padding-top: 40px;
+	text-align: center;
+}
+
+.noData{
+	text-align: center;
+	font-size: 18px;
+	font-weight: bold;
+	color: #ff4646;
+	line-height: 1.5;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.graduationScheduleFrame{
+	width: 100%;
+	display: inline-flex;
+	padding: 40px 40px 0px 40px;
+}
+
+.graduationSchedule{
+	text-align: left;
+	display: inline-block;
+	border: 3px solid rgba(123, 123, 123, 0.272);
+	border-radius: 15px;
+	padding: 10px;
+	margin: auto;
+	width: 70%;
+}
+
+.graduationTopic{
+	/*text-decoration: wavy;*/
+	/*text-decoration-line: underline;*/
+	padding: 20px 10px 10px;
+	font-weight: bold;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+	font-size: xx-large;
+}
+
+.graduationDetails{
+	line-height: 1.8;
+	width: 100%;
+	margin: auto;
+}
+
+.mainframe .profile{
+	margin: 40px auto 20px;
+	align-content: center;
+	border: 0px;
+	border-spacing: 10px;
+}
+
+.mainframe .profile .profileimage{
+	position: relative;
+}
+
+.mainframe .profile .profileimage img{
+	width: 250px;
+	border: 1px solid #000000;
+	border-radius: 50%;
+	background: white;
+}
+
+.mainframe .profile .profileimage .dp{
+	position: relative;
+	z-index: 3;
+}
+
+.mainframe .profile .profileimage .add{
+	position: absolute;
+	width: 50px;
+	margin-left: auto;
+	margin-left: -72px;
+    margin-top: 200px;
+    z-index: 3;
+}
+
+.mainframe .profile .profileimage .add:hover{
+	cursor: pointer;
+}
+
+.lecturermoduletbl{
+	margin: auto;
+}
+
+.lecturermodule{
+	text-align: center;
+}
+
+.mainframe .settings table{
+	margin: 40px auto;
+	border-spacing: 20px;
+	font-size:larger;
+}
+
+.mainframe .settings table td{
+	border-radius: 40px;
+	background: #7474744a;
+	padding: 20px;
+}
+
+.mainframe .settings table td{
+	color: #000000;
+}
+
+.mainframe .settings table tr:hover{
+	background: #fca84e;
+	
+	margin: 40px auto;
+	border-spacing: 10px;
+	border-radius: 20px;
+	border-radius: 40px;
+	cursor: pointer;
+}
+
+.mainframe .settings table tr:hover td{
+	color: white;
+}
+
+.mainframe .settings a{
+	color: #000000;
+}
+
+.note{
+	color: red;
+	padding-bottom: 20px;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.update-btn{
+	color: #5d9c64;
+	margin-top: 10px;
+}
+
+.mainframe .changepassword table{
+	margin: 40px auto;
+	border-spacing: 10px;
+}
+
+.mainframe .changepassword input{
+	padding: 10px;
+}
+
+.mainframe .noticeboardOuterFrame{
+	width: 80%;
+	border: 3px solid rgba(123, 123, 123, 0.272);
+	border-radius: 20px;
+	margin: 20px auto;
+	padding: 40px;
+	background: rgba(255, 255, 255, 0.4);
+	
+}
+
+.mainframe .noticeboardOuterFrame .noticeboardInnerFrame a{
+	color: red;
+	text-decoration: underline;
+}
+
+.mainframe .noticeboardOuterFrame .noticeboardInnerFrame{
+	width: 90%;
+	background: #ffffff83;
+	margin: auto;
+	border: 3px solid rgba(140, 166, 190, 0.272);
+	border-radius: 10px;
+}
+
+.mainframe .noticeboardOuterFrame .noticeboardInnerFrame table{
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	max-width: 100%;
+	margin: 0px auto 10px;
+}
+
+.mainframe .noticeboardOuterFrame .noticeboardInnerFrame table .subject h1{
+	margin-top: 10px;
+	font-weight: bold;
+	text-decoration: double;
+}
+
+.mainframe .noticeboardOuterFrame img{
+	width: 100%;
+	margin: auto;
+	border: 2px solid #545454;
+	border-radius: 10px;
+	border-style: double;
+
+}
+
+.mainframe .noticeboardOuterFrame .noticeboardInnerFrame table .description{
+	margin-top: 10px;
+	padding:  0px 60px 10px;
+	text-decoration: double;
+	text-align: center;
+	line-height: 1.5;
+}
+
+.mainframe .noticeboardOuterFrame .noticeboardInnerFrame table .to{
+	font-size: 0.75rem;
+	text-align: left;
+}
+
+.mainframe .noticeboardOuterFrame .noticeboardInnerFrame table .details{
+	font-size: 0.75rem;
+	text-align: right;
+}
+
+.add_module_btn:hover{
+	margin-top: 30px;
+	background: #27b820;
+	border-color: #ffffff;
+	border-radius: 40px;
+	padding: 10px 18px;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.add_module_btn{
+	margin-top: 30px;
+	background: #28b8206a;
+	border-color: #ffffff;
+	border-radius: 40px;
+	padding: 10px 18px;
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.contact{
+	margin: auto;
+	width: 40%;
+	background-color: #ffffff79;
+	border-radius: 10px;
+}
+
+.task i{
+	height: 30px;
+}
+
+.coursematerials{
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.coursematerials a{
+	color: red;
+	text-decoration: underline;
+}
+
+.bottom-bar {
+	padding: 10px;
+	display: inline-block;
+	margin-left: 280px;
+	margin-top: 5px;
+	margin-right: 30px;
+	margin-bottom: 10px;
+	border-radius: 20px;
+	width: 79.8%;
+	height: auto;
+	background: rgba(77, 134, 181, 0.5);
+	border: 1px solid rgba(0, 0, 0, .1);
+	backdrop-filter: blur(5px);
+	box-shadow: 0 0 10 rgba(0, 0, 0, .2);
+	color: #ffffff;
+	text-align: center;
+	font-size: 0.75rem;
+}

@@ -1,0 +1,68 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: url(/images/pxfuel.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.div1-1 {
+    padding: 40px;
+    width: 40%;
+	background: rgba(77, 134, 181, 0.1);
+	border: 2px solid rgba(255, 255, 255, .2);
+	backdrop-filter: blur(5px);
+	box-shadow: 0 0 10 rgba(0, 0, 0, .2);
+	color: #000000;
+	border-radius: 20px;
+}
+
+img{
+    max-width: 20%;
+    margin: 10px;
+}
+
+.error{
+    padding: 10px;
+    color: red;
+}
+
+.question{
+    padding: 10px;
+    color: #25b7d3;
+}
+
+.success{
+    padding: 10px;
+    color: green;
+}
+
+button{
+    font-weight: bold;
+    padding: 10px;
+    margin: 30px 10px 10px 10px;
+    width: 120px;
+    border-radius: 5px;
+    border: 1px;
+    background-color: white;
+    font-size: large;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: large;
+}
